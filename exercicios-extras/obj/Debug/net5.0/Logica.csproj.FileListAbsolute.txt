@@ -1,0 +1,48 @@
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/Logica.exe
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/Logica.deps.json
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/Logica.runtimeconfig.json
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/Logica.runtimeconfig.dev.json
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/Logica.dll
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/ref/Logica.dll
+C:/Users/dev/Desktop/exercicios extras/Logica/bin/Debug/net5.0/Logica.pdb
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.csproj.AssemblyReference.cache
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.AssemblyInfoInputs.cache
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.AssemblyInfo.cs
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.csproj.CoreCompileInputs.cache
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.dll
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/ref/Logica.dll
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.pdb
+C:/Users/dev/Desktop/exercicios extras/Logica/obj/Debug/net5.0/Logica.genruntimeconfig.cache
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/Logica
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/Logica.deps.json
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/Logica.runtimeconfig.json
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/Logica.runtimeconfig.dev.json
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/Logica.dll
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/ref/Logica.dll
+/home/karamaz0v/Área de Trabalho/exercicios-extras/bin/Debug/net5.0/Logica.pdb
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.csproj.AssemblyReference.cache
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.GeneratedMSBuildEditorConfig.editorconfig
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.AssemblyInfoInputs.cache
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.AssemblyInfo.cs
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.csproj.CoreCompileInputs.cache
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.dll
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/ref/Logica.dll
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.pdb
+/home/karamaz0v/Área de Trabalho/exercicios-extras/obj/Debug/net5.0/Logica.genruntimeconfig.cache
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\Logica.exe
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\Logica.deps.json
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\Logica.runtimeconfig.json
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\Logica.runtimeconfig.dev.json
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\Logica.dll
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\ref\Logica.dll
+C:\Users\dev\Desktop\exercicios-extras\bin\Debug\net5.0\Logica.pdb
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.csprojAssemblyReference.cache
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.dll
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\ref\Logica.dll
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.pdb
+C:\Users\dev\Desktop\exercicios-extras\obj\Debug\net5.0\Logica.genruntimeconfig.cache
