@@ -1,24 +1,23 @@
-//---------------------------------------------------SUPERCLASSE ABSTRATA-----------------------------------------------------
+//---------------------------------------------------SUPERCLASSE-----------------------------------------------------
 
 using System.Collections.Generic;
 using System.IO;
 
 namespace POO_MVC.Models
 {
-    public abstract class Usuario : RockInSenaiBase
+    public class Usuario : RockInSenaiBase
     {
         private string Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         private string Senha { get; set; }
-        private string NumeroDeMusico { get; set; }
-
+        private string NumeroDeMusico { get; set; }     // = null na classe Particpante; Só será instanciado na classe Musico
 
 
 
         //---------------------------CONSTANTES DA CLASSE-----------------------------------------
 
-        private const string CAMINHO = "DataBase/Usuario.csv";  //  Constante que define o local onde o arquivo csv será criado
+        private const string CAMINHO = "DataBase/Usuarios.csv";  //  Constante que define o local onde o arquivo csv será criado
 
 
 
@@ -34,22 +33,29 @@ namespace POO_MVC.Models
 
 
 
-
-
-
-
-
-
-
         //---------------------------METODOS DA CLASSE-----------------------------------------
+
+
+
+        public string getCAMINHO()
+        {
+            return CAMINHO;
+        }
+
+
+        //-----------------------------------------------------------------------------------------
 
 
         //Metodo auxiliar do metodo Criar (abaixo). Converte os atributos do usuario recebido como parametro em string, que será retornada utilizando caracter de separação especifico (no caso, ;)
         public string Preparar(Usuario aConverter)
         {
-            
-            return $"{aConverter.Id};{aConverter.Nome};{aConverter.Email};{aConverter.Senha};{aConverter.NumeroDeMusico}";
+
+            return $"{aConverter.Id};{aConverter.Nome};{aConverter.Email};{aConverter.Senha};{aConverter.NumeroDeMusico}";  //  
         }
+
+
+
+        //-----------------------------------------------------------------------------------------
 
 
 
@@ -77,6 +83,8 @@ namespace POO_MVC.Models
         {
             List<Usuario> listaDeUsuarios = new List<Usuario>();
 
+            Usuario novo = new Usuario();
+
             string[] arrayDeLinhas = File.ReadAllLines(CAMINHO);
 
             foreach (var cadaLinha in arrayDeLinhas)
@@ -85,14 +93,14 @@ namespace POO_MVC.Models
 
                 // {aConverter.Id};{aConverter.Nome};{aConverter.Email};{aConverter.Senha};{aConverter.NumeroDeMusico}";
 
-                Id = atributosEmCadaLinha[0];
-                Nome = atributosEmCadaLinha[1];
-                Email = atributosEmCadaLinha[2];
-                Senha = atributosEmCadaLinha[3];
-                NumeroDeMusico = atributosEmCadaLinha[4];
-                
+                novo.Id = atributosEmCadaLinha[0];
+                novo.Nome = atributosEmCadaLinha[1];
+                novo.Email = atributosEmCadaLinha[2];
+                novo.Senha = atributosEmCadaLinha[3];
+                novo.NumeroDeMusico = atributosEmCadaLinha[4];
 
-                //listaDeUsuarios.Add(cadaUsuarioDaLista);                  PAREI AQUI, DESCOMENTAR AQUI E 115
+
+                listaDeUsuarios.Add(novo);
             }
 
             return listaDeUsuarios;
@@ -107,18 +115,18 @@ namespace POO_MVC.Models
 
 
         //  Para fazer qualquer alteração em um atributo da lista de objetos, devemos ler o arquivo csv, copiar seu conteudo completo em uma lista, indicar um parametro de referencia que identifique o objeto a ser removido da lista, adicionar o novo objeto com as alterações corretas e por fim salvar a nova lista atualizada no arquivo csv. Por isso, criamos os metodos de LER e REESCREVER na superclasse base e os herdamos nas classes onde serão utilizados, visto que o processo de alteração se repetirá em todas as classes
-        public void Alterar(Usuario usuarioJaContendoAlteracoesParaSalvar)
+        public void Alterar(Usuario AlteracoesParaSalvar)
         {
-            List<string> listaComConteudoDoArquivoCSV = LerTodasLinhasCSV(CAMINHO);
+            List<string> conteudoDoArquivoCSV = LerTodasLinhasCSV(CAMINHO);
 
             //Remove um determinado objeto da lista utilizando expressão lambda referenciada pelo Id do usuario para localiza-lo na lista
-    //DESCOMENTAR        listaComConteudoDoArquivoCSV.RemoveAll(cadaAtributoNaLinha => cadaAtributoNaLinha.Split(";")[0] == usuarioJaContendoAlteracoesParaSalvar.IdUsuario.ToString());
+            conteudoDoArquivoCSV.RemoveAll(cadaAtributoNaLinha => cadaAtributoNaLinha.Split(";")[0] == AlteracoesParaSalvar.Id);
 
             //Adiciona o novo objeto com alterações à lista utilizando o metodo Preparar(), que antes o converte para string conforme exigencia do metodo Add
-            listaComConteudoDoArquivoCSV.Add(Preparar(usuarioJaContendoAlteracoesParaSalvar));
+            conteudoDoArquivoCSV.Add(Preparar(AlteracoesParaSalvar));
 
             //Reescreve o csv utilizando a lista atualizada acima
-            ReescreverCSV(CAMINHO, listaComConteudoDoArquivoCSV);
+            ReescreverCSV(CAMINHO, conteudoDoArquivoCSV);
         }
 
 
@@ -131,14 +139,14 @@ namespace POO_MVC.Models
         // Metodo para remover um usuario tendo por referencia seu Id. O metodo possui praticamente o mesmo funcionamento logico do Alterar() acima, porem sem adição de atualizações;
         public void Deletar(int idDoUsuarioADeletar)
         {
-            List<string> listaComConteudoDoArquivoCSV = LerTodasLinhasCSV(CAMINHO);
+            List<string> conteudoDoArquivoCSV = LerTodasLinhasCSV(CAMINHO);
 
             //Remove um determinado objeto da lista utilizando expressão lambda referenciada pelo Id do usuario para localiza-lo na lista
-            listaComConteudoDoArquivoCSV.RemoveAll(cadaAtributoNaLinha => cadaAtributoNaLinha.Split(";")[0] == idDoUsuarioADeletar.ToString());
+            conteudoDoArquivoCSV.RemoveAll(cadaAtributoNaLinha => cadaAtributoNaLinha.Split(";")[0] == idDoUsuarioADeletar.ToString());
 
 
             //Reescreve o csv utilizando a lista atualizada acima, já sem o objeto removido
-            ReescreverCSV(CAMINHO, listaComConteudoDoArquivoCSV);
+            ReescreverCSV(CAMINHO, conteudoDoArquivoCSV);
         }
 
 
@@ -156,8 +164,19 @@ namespace POO_MVC.Models
 
         //------------------------------------------------------METODO LOGAR----------------------------------------------------------------
 
-        public virtual bool Logar(string _email)
+        public virtual bool Logar(string _email, string _senha)
         {
+            List<string> dadosCSV = this.LerTodasLinhasCSV(CAMINHO);
+
+            string logado = dadosCSV.Find( x => 
+            x.Split(";")[2] == _email &&
+            x.Split(";")[3] == _senha
+            );
+
+            if (logado != null)
+            {
+                return true;
+            }
 
             return false;
         }

@@ -4,6 +4,18 @@ namespace POO_MVC.Models
     {
 
 
+        //---------------------------METODOS CONSTRUTORES----------------------------------------
+
+        public Participante()
+        {
+            CriarPastaEArquivo( this.getCAMINHO() );
+        }
+
+
+
+        
+
+
         public string ConfirmarChegada()
         {
 
