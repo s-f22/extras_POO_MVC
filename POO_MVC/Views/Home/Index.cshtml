@@ -2,48 +2,74 @@
     ViewData["Title"] = "Home Page";
 }
 
-<section class="contato">
-            <div class="conteudo_section">
-                <h1>contato</h1>
-                <form class="formulario" action="">
-                    <div class="campo">
-                        <label for="">nome completo</label>
-                        <input type="text">
-                    </div>
-                    <div class="campo">
-                        <label for="">email</label>
-                        <input type="text">
-                    </div>
-                    <div class="campo">
-                        <label for="">telefone</label>
-                        <input type="text">
-                    </div>
-                    <div class="input_area">
-                        <label for="">mensagem</label>
-                        <textarea class="msg" name="" id="" cols="30" rows="10"></textarea>
-                        <!-- <input class="inserir" type="text"> -->
-                    </div>
+@* <section class="contato">
+    <div class="conteudo_section">
+    <h1>contato</h1>
+    <form class="formulario" action="">
+    <div class="campo">
+    <label for="">nome completo</label>
+    <input type="text">
+    </div>
+    <div class="campo">
+    <label for="">email</label>
+    <input type="text">
+    </div>
+    <div class="campo">
+    <label for="">telefone</label>
+    <input type="text">
+    </div>
+    <div class="input_area">
+    <label for="">mensagem</label>
+    <textarea class="msg" name="" id="" cols="30" rows="10"></textarea>
+    <!-- <input class="inserir" type="text"> -->
+    </div>
 
 
-                    <input class="botao_enviar" type="submit" value="enviar">
-                </form>
-            </div>
+    <input class="botao_enviar" type="submit" value="enviar">
+    </form>
+    </div>
 
-        </section>
+    </section>
 
-        <aside>
-            <div>
-                <b>fone: </b><span>31 99999 9666</span>
-            </div>
-            <div>
-                <b>email: </b><span>contato@divinafashion.com</span>
-            </div>
-            <div>
-                <b>endereço: </b><span>Av. principal, 123 BH-MG</span>
-            </div>
-        </aside>
+    <aside>
+    <div>
+    <b>fone: </b><span>31 99999 9666</span>
+    </div>
+    <div>
+    <b>email: </b><span>contato@divinafashion.com</span>
+    </div>
+    <div>
+    <b>endereço: </b><span>Av. principal, 123 BH-MG</span>
+    </div>
+    </aside> *@
 
-@* <div class="text-center">
+<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> *@
+</div>
+
+<div class="conteudo_section">
+    <h1>cadastrar</h1>
+
+
+    <form class="formulario" method="POST" action='@Url.Action("Cadastrar")'>
+        <div class="campo">
+            <label for="">Nome</label>
+            <input type="text" name="Nome">
+        </div>
+        <div class="campo">
+            <label for="">Email</label>
+            <input type="email" name="Email">
+        </div>
+        <div class="campo">
+            <label for="">Senha</label>
+            <input type="password" name="Senha">
+        </div>
+        <div class="campo">
+            <label for="">OMB</label>
+            <input type="text" placeholder="(opcional)" name="NumeroDeMusico">
+        </div>
+
+        <input class="botao_enviar" type="submit" value="enviar">
+    </form>
+</div>

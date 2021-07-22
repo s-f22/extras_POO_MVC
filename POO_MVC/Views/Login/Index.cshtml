@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="conteudo_section">
+    <h1>Login</h1>
+
+
+    <form class="formulario" method="POST" action='@Url.Action("Logar")'>
+        
+        <div class="campo">
+            <label for="">Email</label>
+            <input type="email" name="Email">
+        </div>
+        <div class="campo">
+            <label for="">Senha</label>
+            <input type="password" name="Senha">
+        </div>
+        @if (ViewBag.Login != "")
+        {
+            <p>@ViewBag.Login</p>
+        }
+        
+
+        <input class="botao_enviar" type="submit" value="enviar">
+    </form>
+</div>

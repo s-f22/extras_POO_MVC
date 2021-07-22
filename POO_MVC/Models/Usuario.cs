@@ -42,6 +42,21 @@ namespace POO_MVC.Models
             return CAMINHO;
         }
 
+        public void setId(string _Id)
+        {
+            this.Id = _Id;
+        }
+
+        public void setSenha(string _senha)
+        {
+            this.Senha = _senha;
+        }
+
+        public void setOMB(string _omb)
+        {
+            this.NumeroDeMusico = _omb;
+        }
+
 
         //-----------------------------------------------------------------------------------------
 
@@ -50,7 +65,12 @@ namespace POO_MVC.Models
         public string Preparar(Usuario aConverter)
         {
 
-            return $"{aConverter.Id};{aConverter.Nome};{aConverter.Email};{aConverter.Senha};{aConverter.NumeroDeMusico}";  //  
+            if (aConverter.NumeroDeMusico != null)
+            {
+                return $"{aConverter.Id};{aConverter.Nome};{aConverter.Email};{aConverter.Senha};{aConverter.NumeroDeMusico}";
+            }
+
+            return $"{aConverter.Id};{aConverter.Nome};{aConverter.Email};{aConverter.Senha}";
         }
 
 
@@ -168,9 +188,9 @@ namespace POO_MVC.Models
         {
             List<string> dadosCSV = this.LerTodasLinhasCSV(CAMINHO);
 
-            string logado = dadosCSV.Find( x => 
-            x.Split(";")[2] == _email &&
-            x.Split(";")[3] == _senha
+            string logado = dadosCSV.Find(x =>
+           x.Split(";")[2] == _email &&
+           x.Split(";")[3] == _senha
             );
 
             if (logado != null)
