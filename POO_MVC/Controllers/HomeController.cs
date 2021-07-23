@@ -39,7 +39,7 @@ namespace POO_MVC.Controllers
                 novoM.setId( gerarId.Next(1, 100000).ToString() );
                 novoM.Nome = (form["Nome"]);
                 novoM.Email = (form["Email"]);
-                novoM.setSenha( (form["Email"]) );
+                novoM.setSenha( (form["Senha"]) );
                 novoM.setOMB( (form["NumeroDeMusico"]) );
 
                 acessoMetodos.Criar(novoM);
@@ -49,7 +49,7 @@ namespace POO_MVC.Controllers
                 novoP.setId( gerarId.Next(1, 100000).ToString() );
                 novoP.Nome = (form["Nome"]);
                 novoP.Email = (form["Email"]);
-                novoP.setSenha( (form["Email"]) );
+                novoP.setSenha( (form["Senha"]) );
 
                 acessoMetodos.Criar(novoP);
             }

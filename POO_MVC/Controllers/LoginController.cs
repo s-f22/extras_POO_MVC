@@ -6,9 +6,10 @@ namespace POO_MVC.Controllers
 {
     public class LoginController : Controller
     {
+        protected static string login = null;
         public IActionResult Index()
-        {
-
+        {     
+            ViewBag.Login = login;
             return View();
         }
 
@@ -17,13 +18,14 @@ namespace POO_MVC.Controllers
 
             Participante acessoMetodos = new Participante();
 
-            if (acessoMetodos.Logar((form["Email"]), (form["Senha"])))
+
+            if (acessoMetodos.Logar( ( form["Email"]).ToString(), (form["Senha"]).ToString() ) )
             {
-                ViewBag.Login = $"Login realizado com sucesso. Bem vindo!";
+                login = $"Login realizado com sucesso. Bem vindo!";
             }
             else
             {
-                ViewBag.Login = $"Usuario ou senha inválido. Tente novamente";
+                login = $"Usuario ou senha inválido. Tente novamente";
             }
 
             return LocalRedirect("~/Login");

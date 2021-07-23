@@ -15,14 +15,14 @@ namespace POO_MVC.Models
 
 
 
-        //---------------------------CONSTANTES DA CLASSE-----------------------------------------
+        //-------------------------------------------CONSTANTES DA CLASSE-----------------------------------------------
 
         private const string CAMINHO = "DataBase/Usuarios.csv";  //  Constante que define o local onde o arquivo csv será criado
 
 
 
 
-        //---------------------------METODOS CONTRUTORES----------------------------------------
+        //---------------------------------------------METODOS CONTRUTORES-----------------------------------------------
 
         //  Metodo herdado da superclasse Base, que recebe como parametro a constante CAMINHO definida acima e cria automaticamente um arquivo csv, onde serão salvos os dados do usuarios
         public Usuario()
@@ -33,7 +33,7 @@ namespace POO_MVC.Models
 
 
 
-        //---------------------------METODOS DA CLASSE-----------------------------------------
+        //-----------------------------------------------METODOS DA CLASSE---------------------------------------------------
 
 
 
